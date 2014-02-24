@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Kyle Maguire - 2D Project</title>
+	<link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div id="title" class="title">
+    	LaserStar 9<br />
+        <span style="font-size:18px;">Created by Kyle Maguire</span>
+  	</div>
+	<div id="menu" class="menu">
+    	NAME
+    	<input id="PlayerName" type="text" value="" maxlength="16" />
+        <img id="ShipPreview" src=""><br />
+        SHIP TYPE
+        <select id="ShipType">
+            <option value="Assault">Assault Fighter</option>
+            <option value="Bomber">Tactical Bomber</option>
+        </select>
+        <button id="StartButton" class="menu_button" onclick="gameStart()">Start Game</button>
+   	</div>
+    
+    <div id="title_GameOver" class="title" style="display:none;">GAME OVER</div>
+	<div id="menu_GameOver" class="menu" style="display:none;">
+    	<span style="font-size:22px; font-weight:bold;">NAME</span><br />
+        <span id="name" style="font-size:18px;"></span>
+        <br /><br />
+        <span style="font-size:22px; font-weight:bold;">FINAL SCORE</span><br />
+        <span id="finalScore" style="font-size:30px; font-weight:bold;"></span>
+        <br /><br />
+        <span style="font-size:22px; font-weight:bold;">FINAL LEVEL</span><br />
+        <span style="font-size:18px;">Level <span id="finalLevel"></span> <span id="type"></span><span>
+        <button id="ResetButton" class="menu_button" onclick="gameReset()">Try Again</button>
+   	</div>
+    
+    <div id="Mute">MUTE</div>
+    
+    <div id="PowerUpKey">
+    	<span class="key_title">POWER UPS</span>
+    	<div><img src="assets/powerup_1.png" /><br />ARMOR</div>
+        <div><img src="assets/powerup_2.png" /><br />EXTRA LIFE</div>
+        <div><img src="assets/powerup_3.png" /><br />INVINCIBILITY</div>
+        <div><img src="assets/powerup_4.png" /><br />POINTS</div>
+    </div>
+    
+	<div id="viewport"></div>
+    
+    <div id="DevControls">
+   		<span class="key_title">DEV CONTROLS</span>
+        <br /><br />
+    	GRANT POINTS<br />
+        <div class="button" onclick="PLAYER.addScore(100)">100</div>
+        <div class="button" onclick="PLAYER.addScore(1000)">1,000</div>
+        <div class="button" onclick="PLAYER.addScore(10000)">10,000</div>
+        <br /><br />
+    	SPAWN POWER UPS<br />
+        <div class="button" onclick="powerUp(1)"><img style="width:30px; height:30px;" src="assets/powerup_1.png" /></div>
+        <div class="button" onclick="powerUp(2)"><img style="width:30px; height:30px;" src="assets/powerup_2.png" /></div>
+        <div class="button" onclick="powerUp(3)"><img style="width:30px; height:30px;" src="assets/powerup_3.png" /></div>
+        <div class="button" onclick="powerUp(4)"><img style="width:30px; height:30px;" src="assets/powerup_4.png" /></div>
+        <br /><br />
+        SPAWN ENEMY WAVES<br />
+        <div class="button wave" onclick="enemyWave(0,0)">1</div>
+        <div class="button wave" onclick="enemyWave(0,1)">2</div>
+        <div class="button wave" onclick="enemyWave(0,2)">3</div>
+        <br />
+        <div class="button wave" onclick="enemyWave(1,0)">4</div>
+        <div class="button wave" onclick="enemyWave(1,1)">5</div>
+        <div class="button wave" onclick="enemyWave(1,2)">6</div>
+        <br />
+        <div class="button wave" onclick="enemyWave(2,0)">7</div>
+        <div class="button wave" onclick="enemyWave(2,1)">8</div>
+        <div class="button wave" onclick="enemyWave(2,2)">9</div>
+        <br />
+        <div class="button wave" onclick="enemyWave(3,0)">10</div>
+        <div class="button wave" onclick="enemyWave(3,1)">11</div>
+        <div class="button wave" onclick="enemyWave(3,2)">12</div>
+        <br />
+        <div class="button wave" onclick="enemyWave(4,0)">13</div>
+        <div class="button wave" onclick="enemyWave(4,1)">14</div>
+        <div class="button wave" onclick="enemyWave(4,2)">15</div>
+        <br />
+        <div class="button wave" onclick="enemyWave(5,0)">16</div>
+        <div class="button wave" onclick="enemyWave(5,1)">17</div>
+        <div class="button wave" onclick="enemyWave(5,2)">18</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/lib/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/lib/raphael-min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>

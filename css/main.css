@@ -1,0 +1,201 @@
+body {
+	overflow: hidden;
+	background-color: #000;
+}
+.title {
+	position: fixed;
+    width: 800px;
+    margin: auto auto auto -400px;
+    top: 200px;
+    left: 50%;
+	z-index: 1001;
+	
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+.menu {
+	position: fixed;
+    width: 270px;
+    margin: auto auto auto -135px;
+    top: 400px;
+    left: 50%;
+	z-index: 1000;
+	
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	background-color: #666;
+	padding: 20px 10px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	moz-border-radius: 6px;
+	webkit-border-radius: 6px;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#PlayerName {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	width: 240px;
+	padding: 6px;
+	margin: 10px auto;
+	border: 1px solid #555;
+	border-radius: 4px;
+	moz-border-radius: 4px;
+	webkit-border-radius: 4px;
+}
+#ShipPreview {
+	width: 75px;
+	height: 100px;
+	margin: 10px auto;
+}
+#ShipType {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	width: 250px;
+	padding: 6px;
+	margin: 10px auto;
+	border: 1px solid #555;
+	border-radius: 4px;
+	moz-border-radius: 4px;
+	webkit-border-radius: 4px;
+}
+.menu_button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	width: 250px;
+	padding: 6px;
+	margin: 30px auto 10px auto;
+	border: 1px solid #555;
+	border-radius: 4px;
+	moz-border-radius: 4px;
+	webkit-border-radius: 4px;
+}
+.menu_button:hover, .menu_button:focus {
+	background-color: #999;
+}
+#Mute {
+	position: fixed;
+    width: 200px;
+    top: 100px;
+    left: 100px;
+	z-index: 999;
+	
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #666;
+	width: 200px;
+	padding: 5px 10px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	moz-border-radius: 6px;
+	webkit-border-radius: 6px;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#Mute:hover, #Mute:focus {
+	background-color: #999;
+}
+#PowerUpKey {
+	display: none;
+	
+	position: fixed;
+    width: 200px;
+    top: 100px;
+    left: 100px;
+	z-index: 999;
+	
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	background-color: #666;
+	padding: 20px 10px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	moz-border-radius: 6px;
+	webkit-border-radius: 6px;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#PowerUpKey img {
+	margin: 20px 0 5px;
+}
+#viewport {
+	width: 1000px;
+	height: 800px;
+	padding: 0;
+	border: #666 solid 1px;
+	margin: 70px auto;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#DevControls {
+	display: none;
+	
+	position: fixed;
+    width: 250px;
+    top: 100px;
+    left: 100px;
+	z-index: 999;
+	
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #666;
+	padding: 20px 10px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	moz-border-radius: 6px;
+	webkit-border-radius: 6px;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#DevControls .button {
+	display: inline-block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	background-color: #333;
+	padding: 6px;
+	border: 1px solid #555;
+	border-radius: 4px;
+	moz-border-radius: 4px;
+	webkit-border-radius: 4px;
+	margin: 10px 5px;
+}
+#DevControls .button.wave {
+	width: 20px;
+	height: 20px;
+	padding: 8px;
+}
+#DevControls .button:hover, #DevControls .button:focus {
+	background-color: #666;
+}
+.key_title {
+	font-size: 18px;
+	font-weight: bold;
+}
